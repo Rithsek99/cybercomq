@@ -9,12 +9,15 @@ import requests
 
 #Example task
 @task()
-def add(x, y):
+def add(x, y,cybercom_auth_token=None):
     """ Example task that adds two numbers or strings
         args: x and y
+        kwargs: cybercom_auth_token (Default add by cybercommons)
         return addition or concatination of strings
     """
     result = x + y
+    if cybercom_auth_token:
+        return cybercom_auth_token
     return result
 @task()
 def subtract(x, y):
