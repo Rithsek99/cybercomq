@@ -16,9 +16,9 @@ def add(x, y,cybercom_auth_token=None):
         return addition or concatination of strings
     """
     result = x + y
-    if cybercom_auth_token:
-        return cybercom_auth_token
-    return result
+    #if cybercom_auth_token:
+    return cybercom_auth_token
+    #return result
 @task()
 def subtract(x, y):
     """ Example task that adds two numbers or strings
