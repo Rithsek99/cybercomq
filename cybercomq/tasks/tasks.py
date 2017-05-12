@@ -27,3 +27,10 @@ def subtract(x, y):
     """
     result = x - y
     return result
+
+@task()
+def doc_task():
+    docker_name = 'python'
+    docker_cmd = 'python /data/test.py'
+    task_id = 'fdfjkldfjdjfl'
+    docker_task(docker_name=docker_name,docker_opts='-v /Users/mstacy:/data',docker_command=docker_cmd,id=task_id)
