@@ -1,10 +1,11 @@
-from celery.task import task
+from celery import Celery
+import celeryconfig
 
-#Default base directory 
-#basedir="/data/static/"
+app = Celery()
+app.config_from_object(celeryconfig)
 
-#Echo task
-@task()
+#Example task
+@app.task()
 def echo(txt):
      """ Echo task that print out the string input
          args: txt
@@ -13,7 +14,7 @@ def echo(txt):
     return 0	    
 
 #Example task
-@task()
+@app.task()
 def add(x, y):
     """ Example task that adds two numbers or strings
         args: x and y
