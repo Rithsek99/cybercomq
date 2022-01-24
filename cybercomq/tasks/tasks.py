@@ -7,9 +7,9 @@ app.config_from_object(celeryconfig)
 #Example task
 @app.task()
 def echo(txt):
-     """ Echo task that print out the string input
+    """ Echo task that print out the string input
          args: txt
-     """
+    """
     print(txt)
     return 0	    
 
