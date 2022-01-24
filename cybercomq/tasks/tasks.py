@@ -10,8 +10,9 @@ def echo(txt):
     """ Echo task that print out the string input
          args: txt
     """
+    # print to log
     print(txt)
-    return 0	    
+    return txt	    
 
 #Example task
 @app.task()
